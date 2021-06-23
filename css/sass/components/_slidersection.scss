@@ -1,0 +1,76 @@
+.hero-slider{
+    background-image: url('/img/landing-hero-05.png'); padding-top: 100px;
+    padding-top: 100px;
+    background-position: right center;
+    background-size: cover;
+    height: 800px;
+    position: relative;
+    top: -120px;
+
+
+    h1{
+        font-size: 60px;
+        text-transform: uppercase;
+        color: $color-backgrounds;
+        padding-top: 15rem;
+    }
+    .btn-group .btn{
+        width: 188px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        &:hover{
+            background-color: darken($orange,5%);
+        }
+        + .btn{
+            margin-left: 15px;
+        }
+        @include break(0,767px){
+            + .btn{
+                margin-left:0;
+            }
+        }
+    }
+    .card-float{
+        font-size: 18px;
+        position: absolute;
+        right: 0;
+        width: 360px;
+        bottom: 15%;
+        box-shadow: 0 9px 26px rgba(0,0,0,.7);
+        background: -moz-linear-gradient(top,#fff 0,#f6f6f6 13%,#e8e8e8 100%);
+        background: -webkit-gradient(left top,left bottom,color-stop(0,#fff),color-stop(13%,#f6f6f6),color-stop(100%,#e8e8e8));
+        background: -webkit-linear-gradient(top,#fff 0,#f6f6f6 13%,#e8e8e8 100%);
+        background: -o-linear-gradient(top,#fff 0,#f6f6f6 13%,#e8e8e8 100%);
+        background: -ms-linear-gradient(top,#fff 0,#f6f6f6 13%,#e8e8e8 100%);
+        background: linear-gradient(to bottom,#fff 0,#f6f6f6 13%,#e8e8e8 100%);
+        color: #243961;
+        border-radius: 3px 0 0 3px;
+        padding: 18px 15px;
+        @include break(0,767px){
+            font-size: 13px;
+            line-height: 1.4;
+            position: relative;
+            margin: 10px 0 10px 0;
+            width: 100%;
+            border-radius: 3px;
+        }
+        .media {
+            display: inline-flex;
+            .media-left {
+                padding-right: 10px;
+            }
+            .media-body a{
+                color: $color-headlines;
+            }
+            .media-body a em{
+                font-size: 16px;
+                color: $darkblue;
+                letter-spacing: .4px;
+                padding-top: 1rem;
+                display: block;
+            }
+        }
+
+        
+    }
+}

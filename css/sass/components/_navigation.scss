@@ -1,0 +1,106 @@
+//Navigation
+.top-header{
+    header & {
+        background-color: $darkblue;
+        color: $white;
+        @include break(0,768px) {
+			display: none;
+		}
+    }
+    .container{
+        text-align: right;
+    }
+    ul{
+        list-style: none;
+		margin: 0;
+		padding: 0;
+		@include clearfix;
+    }
+    ul li {
+        float: left;
+		padding: 10px 5px;
+	}
+    ul li:nth-child(3) {
+        float: right;
+	}
+    ul li a {
+		padding: 10px 5px;
+		color: $color-backgrounds;
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+
+		&:hover {			
+			color: $orange;
+		}
+	}
+}
+nav {
+	header & {
+		background-color: fade-out($color-backgrounds,0.2);
+        z-index: 1;
+        position: relative;
+	}
+
+    .navbar-brand{
+        @include clearfix;
+        .media-left{
+            float:left;
+            padding: 15px 0;      
+        }
+        .media-left img{
+            @include break(0,767px){
+                width: 70%;
+            }
+        }
+        .media-body{
+            display: block;
+            @include break(768px){
+                display: none;
+            }
+            .navbar-mob-header{
+                float: right;
+            }
+            .navbar-mob-header a{
+                padding: 20px 15px 15px;
+                background: $darkgrey;
+                text-align: center;
+                width: 40px;
+                min-height: 50px;
+                display: block;
+            }
+        }
+
+    }
+    @include break(0,768px){
+        .container{
+            padding-right: 0;
+        }
+    }
+
+    .navbar-header{
+        .navbar-nav{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            @include clearfix;
+        }
+        .navbar-nav li{
+            float: right;
+            width: 100px;
+            height: 100px;
+            padding: 19px 0 0;
+            text-align: center;
+            background-color: $darkgrey;
+        }
+        .navbar-nav li a{
+            padding: 10px 5px;
+            background: $darkgrey;
+            color: $color-backgrounds;
+            font-weight: $font-weight-bold;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+    }
+}
